@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta Especial</title>
+  <style>
+    body {
+      background-color: pink;
+      color: rgb(20, 20, 20);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    #si-button {
+      background-color: green;
+      color: #ffffff;
+    }
+
+    #no-button {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Me perdonas pelusita?</h1>
+  <img src="https://i.pinimg.com/originals/be/bd/e2/bebde2124e4d91814c75fa0f2ce8cd72.gif" alt="Description of the GIF">
+  <div class="button-container">
+    <button class="button" id="si-button" onclick="respuesta('si')">Sí</button>
+    <button class="button" id="no-button" onclick="respuesta('no')">No</button>
+  </div>
+
+  <script>
+function respuesta(respuesta) {
+    if (respuesta === 'si') {
+    alert('TE AMO, te has ganado mi qlito '); // Original "si" alert
+    alert('Eres la mejor novia del mundo '); // Additional "si" alert
+    alert('Mi bebe linda te adoro preciosa '); // Another additional "si" alert
+ 
+} else if (respuesta === 'no') {
+    // Change the text of the "No" button after it's clicked
+    const noButton = document.getElementById('no-button');
+    noButton.textContent = 'Yo se que si me perdonaste, te amo eres la mejor del mundo '; // Modified text here
+
+// Handle additional response options
+if (respuesta === 'Te amo yo se que si me perdonaste') {
+  alert('Porfavor yo se que si '); // Additional response alert
+} else if (respuesta === 'si') { // Check for "si" within the "No" response
+  alert('¡Te amo! '); // Additional "si" alert within "No" response
+} else { // Default "No" response with additional alert
+  alert('porfa di que si '); // Original "No" response alert
+  alert('si pasas de aqui no me perdonaras '); // Additional "No" response alert
+}
+}
+}
+
+  </script>
+</body>
+</html>
